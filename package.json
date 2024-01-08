@@ -1,0 +1,34 @@
+{
+  "name": "hindsite",
+  "version": "1.0.0",
+  "description": "time scheduled social media web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TyPeterson/hindsite.git"
+  },
+  "keywords": [
+    "React",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "social",
+    "media",
+    "predictions",
+    "scheduling",
+    "web",
+    "app"
+  ],
+  "author": "Ty Peterson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TyPeterson/hindsite/issues"
+  },
+  "homepage": "https://github.com/TyPeterson/hindsite#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
