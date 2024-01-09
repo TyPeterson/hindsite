@@ -1,26 +1,38 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Feed from './Feed';
+import Profile from './Profile';
+import NewPostModal from './NewPostModal';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+const App = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [currentUserId, setCurrentUserId] = useState("defaultUserId"); // Placeholder for user ID
+
+  // Function to toggle the New Post Modal
+  const toggleModal = () => setShowModal(!showModal);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Welcome to Hindsite</h1>
+        <button onClick={toggleModal} className="btn btn-primary">
+          Create New Post
+        </button>
       </header>
+      <main>
+        {/* Example of Feed Component */}
+        <Feed />
+
+        {/* Example of Profile Component */}
+        {/* Uncomment to use: <Profile userId={currentUserId} /> */}
+
+        {/* New Post Modal */}
+        <NewPostModal show={showModal} onClose={toggleModal} />
+      </main>
     </div>
   );
-}
+};
 
 export default App;
+

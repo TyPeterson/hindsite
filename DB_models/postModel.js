@@ -9,6 +9,14 @@ const postSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
   },
+  username: {
+    type: String,
+    required: true
+  },
+  composedAt: {
+    type: Date,
+    default: Date.now
+  },
   scheduledTime: {
     type: Date,
     required: true
@@ -16,6 +24,11 @@ const postSchema = new mongoose.Schema({
   posted: {
     type: Boolean,
     default: false
+  },
+  ratings: {
+    wrong: { type: Number, default: 0 },
+    neutral: { type: Number, default: 0 },
+    correct: { type: Number, default: 0 }
   },
   // Additional fields as necessary
 });
